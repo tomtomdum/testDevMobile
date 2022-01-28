@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
+// implementation 'androidx.databinding:databinding-runtime:7.1.0'
 public class MainActivity extends AppCompatActivity {
     int compteur;
     @Override
