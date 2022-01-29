@@ -9,6 +9,7 @@ import android.view.View;
 // implementation 'androidx.databinding:databinding-runtime:7.1.0'
 public class MainActivity extends AppCompatActivity {
     int compteur;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -27,7 +28,7 @@ public class MainActivity extends AppCompatActivity {
         startActivity(cam);
     }
 
-    public void additions(){
+    public void additions() {
 
     }
 }
