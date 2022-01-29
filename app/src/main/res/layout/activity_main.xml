@@ -7,15 +7,13 @@
     tools:context=".MainActivity">
 
 
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/allo"
-                app:layout_constraintEnd_toEndOf="@id/tv1"
-                app:layout_constraintStart_toStartOf="@id/tv1"
-
-                app:layout_constraintBottom_toTopOf="@id/tv1"
-                />
+    <ImageView
+        android:layout_width="123dp"
+        android:layout_height="86dp"
+        android:src="@drawable/ic_baseline_local_pharmacy_24"
+        app:layout_constraintBottom_toTopOf="@id/tv1"
+        app:layout_constraintEnd_toEndOf="@id/tv1"
+        app:layout_constraintStart_toStartOf="@id/tv1" />
 
             <EditText
                 android:id="@+id/username"
@@ -63,7 +61,7 @@
         />
 
             <Button
-                android:onClick=""
+                android:onClick="openList"
                 android:id="@+id/log_button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -72,5 +70,12 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 />
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        app:menu="@menu/menu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

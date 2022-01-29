@@ -28,7 +28,8 @@ public class MainActivity extends AppCompatActivity {
         startActivity(cam);
     }
 
-    public void additions() {
-
+    public void openList(View view) {
+        Intent listIntent = new Intent(this, drugsList.class);
+        startActivity(listIntent);
     }
 }
