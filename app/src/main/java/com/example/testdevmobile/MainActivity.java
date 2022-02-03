@@ -32,4 +32,6 @@ public class MainActivity extends AppCompatActivity {
         Intent listIntent = new Intent(this, drugsList.class);
         startActivity(listIntent);
     }
+
+
 }
