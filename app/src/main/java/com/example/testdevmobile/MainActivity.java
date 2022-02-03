@@ -8,6 +8,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
+import com.example.testdevmobile.fragments.WeatherFragments;
+
 // implementation 'androidx.databinding:databinding-runtime:7.1.0'
 public class MainActivity extends AppCompatActivity {
     int compteur;
@@ -38,7 +40,7 @@ public class MainActivity extends AppCompatActivity {
         FragmentManager fragmentManager = getFragmentManager()
         FragmentTransaction fragmentTransaction =
                 fragmentManager.beginTransaction();
-        MyFragment fragment = new MyFragment();
+        WeatherFragments fragment = new WeatherFragments();
         fragmentTransaction.add(R.id.fragment_container, fragment);
         fragmentTransaction.commit();
     }
