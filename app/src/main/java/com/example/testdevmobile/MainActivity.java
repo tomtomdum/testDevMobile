@@ -2,6 +2,8 @@ package com.example.testdevmobile;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.FragmentManager;
+import android.app.FragmentTransaction;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -33,6 +35,11 @@ public class MainActivity extends AppCompatActivity {
     }
 
     onMenuClick(){
-
+        FragmentManager fragmentManager = getFragmentManager()
+        FragmentTransaction fragmentTransaction =
+                fragmentManager.beginTransaction();
+        MyFragment fragment = new MyFragment();
+        fragmentTransaction.add(R.id.fragment_container, fragment);
+        fragmentTransaction.commit();
     }
 }
