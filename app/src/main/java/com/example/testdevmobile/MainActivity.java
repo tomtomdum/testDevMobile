@@ -1,6 +1,7 @@
 package com.example.testdevmobile;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -31,6 +32,11 @@ public class MainActivity extends AppCompatActivity {
     public void openList(View view) {
         Intent listIntent = new Intent(this, drugsList.class);
         startActivity(listIntent);
+    }
+
+    public void listedegeullase(View view) {
+    Intent listIntent = new Intent(this, RecyclerViewActivity.class);
+    startActivity(listIntent);
     }
 
 
