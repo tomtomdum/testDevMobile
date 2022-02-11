@@ -12,7 +12,12 @@ import android.view.View;
 
 import com.example.testdevmobile.databinding.ActivityMainBinding;
 import com.example.testdevmobile.fragments.WeatherFragments;
-
+/*
+Résumé comment faire un fragment
+crééer une classe weatherfragmet
+crééer une layout weatherfragement (contient le layout du fragment)
+crééer une méthode qui va remplacer un élément du layout main qui va etre le container du layout weather
+ */
 // implementation 'androidx.databinding:databinding-runtime:7.1.0'
 public class MainActivity extends AppCompatActivity {
     private ActivityMainBinding binder;
