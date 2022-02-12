@@ -24,8 +24,12 @@ public class MainActivity extends AppCompatActivity {
     int compteur;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+//        super.onCreate(savedInstanceState);
+//        binder = DataBindingUtil.setContentView(this, R.layout.activity_main);
+//        setContentView(binder.getRoot());
+
         super.onCreate(savedInstanceState);
-        binder = DataBindingUtil.setContentView(this, R.layout.activity_main);
+        binder = DataBindingUtil.setContentView(this, R.layout.activity_epicerie);
         setContentView(binder.getRoot());
     }
 
@@ -54,7 +58,9 @@ public class MainActivity extends AppCompatActivity {
         WeatherFragments frag = new WeatherFragments();
         transaction.replace(R.id.my_frag,frag, "weather");
         transaction.commit();
-
-
     }
+
+//    public void openRecyclerView(View view){
+//        Intent intent = new Intent(this,Epi)
+//    }
 }
