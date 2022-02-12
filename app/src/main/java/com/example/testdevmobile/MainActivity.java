@@ -7,11 +7,11 @@ import androidx.fragment.app.FragmentTransaction;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.MenuItem;
 import android.view.View;
 
 import com.example.testdevmobile.databinding.ActivityMainBinding;
 import com.example.testdevmobile.fragments.WeatherFragments;
+
 /*
 Résumé comment faire un fragment
 crééer une classe weatherfragmet
@@ -43,7 +43,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void openList(View view) {
-        Intent listIntent = new Intent(this, drugsList.class);
+        Intent listIntent = new Intent(this, DrugsList.class);
         startActivity(listIntent);
     }
 

@@ -14,7 +14,7 @@ import android.widget.TextView;
 
 import java.util.ArrayList;
 
-public class drugsList extends AppCompatActivity {
+public class DrugsList extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,6 +39,7 @@ public class drugsList extends AppCompatActivity {
             druglist.add("allo"+i);
         }
     }
+
 
 //    public void onCreateContextMenu(ContextMenu menu, View v, ContextMenu.ContextMenuInfo menuInfo){
 //        super.onCreateContextMenu(menu, v, menuInfo);
