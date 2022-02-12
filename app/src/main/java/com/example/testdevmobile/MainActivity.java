@@ -24,12 +24,8 @@ public class MainActivity extends AppCompatActivity {
     int compteur;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-//        super.onCreate(savedInstanceState);
-//        binder = DataBindingUtil.setContentView(this, R.layout.activity_main);
-//        setContentView(binder.getRoot());
-
         super.onCreate(savedInstanceState);
-        binder = DataBindingUtil.setContentView(this, R.layout.activity_epicerie);
+        binder = DataBindingUtil.setContentView(this, R.layout.activity_main);
         setContentView(binder.getRoot());
     }
 
@@ -60,7 +56,7 @@ public class MainActivity extends AppCompatActivity {
         transaction.commit();
     }
 
-//    public void openRecyclerView(View view){
-//        Intent intent = new Intent(this,Epi)
-//    }
+    public void openRecyclerView(View view){
+        Intent intent = new Intent(this,EpicerieActivity.class);
+    }
 }

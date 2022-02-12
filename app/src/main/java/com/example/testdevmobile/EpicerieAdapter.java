@@ -21,11 +21,7 @@ public class EpicerieAdapter extends RecyclerView.Adapter<EpicerieAdapter.ViewHo
         this.inflater = LayoutInflater.from(context);
         this.listeEpicerie = list;
     }
-    private void populateList(){
-        for (int i =0; i<1000000; i++){
-            listeEpicerie.add(new ItemEpicerie("pormme", "ses bons quand ses pas trop surett"));
-        }
-    }
+
     // inflates the row layout from xml when needed
     @NonNull
     @Override
