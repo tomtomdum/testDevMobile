@@ -1,22 +1,27 @@
 package com.example.testdevmobile;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.databinding.DataBindingUtil;
+import androidx.databinding.ViewDataBinding;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
 
 import com.example.testdevmobile.Models.ItemEpicerie;
+import com.example.testdevmobile.databinding.ActivityEpicerieBinding;
 
 import java.util.ArrayList;
 
 public class EpicerieActivity extends AppCompatActivity {
     ArrayList<ItemEpicerie> listeEpicerie = new ArrayList<ItemEpicerie>();
     EpicerieAdapter adapter;
+    private ActivityEpicerieBinding binder;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_epicerie);
+        binder = DataBindingUtil.setContentView(this,R.layout.activity_epicerie);
+        setContentView(binder.getRoot());
 
         populateList();
 

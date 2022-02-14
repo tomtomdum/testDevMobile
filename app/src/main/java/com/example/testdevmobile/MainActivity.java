@@ -8,6 +8,7 @@ import androidx.fragment.app.FragmentTransaction;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.TextView;
 
 import com.example.testdevmobile.databinding.ActivityMainBinding;
 import com.example.testdevmobile.fragments.WeatherFragments;
@@ -20,6 +21,7 @@ crééer une méthode qui va remplacer un élément du layout main qui va etre l
  */
 // implementation 'androidx.databinding:databinding-runtime:7.1.0'
 public class MainActivity extends AppCompatActivity {
+    private int counter =0;
     private ActivityMainBinding binder;
     int compteur;
     @Override
@@ -27,6 +29,8 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         binder = DataBindingUtil.setContentView(this, R.layout.activity_main);
         setContentView(binder.getRoot());
+
+
     }
 
 //    public void onOpen(View view) {
@@ -58,5 +62,6 @@ public class MainActivity extends AppCompatActivity {
 
     public void openRecyclerView(View view){
         Intent intent = new Intent(this,EpicerieActivity.class);
+        startActivity(intent);
     }
 }
