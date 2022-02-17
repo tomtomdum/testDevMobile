@@ -3,6 +3,7 @@
     package="com.example.testdevmobile">
 
     <application
+        android:name=".MonApp"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="Pharmex"
