@@ -22,7 +22,7 @@ public class ClientAdapter extends RecyclerView.Adapter<ClientAdapter.ClientView
     @NonNull
     @Override
     public ClientViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.ite,parent, false);
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_view,parent, false);
         return new ClientViewHolder(view);
     }
 
