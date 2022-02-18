@@ -33,7 +33,7 @@ public class EpicerieActivity extends AppCompatActivity {
 
     private void populateList(){
         for (int i =0; i<1000000; i++){
-            listeEpicerie.add(new ItemEpicerie("pormme", "ses bons quand ses pas trop surett"));
+            listeEpicerie.add(new ItemEpicerie("pormme", "ses bons quand ses pas trop surettaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"));
         }
     }
 }

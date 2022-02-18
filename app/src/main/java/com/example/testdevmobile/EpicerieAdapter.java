@@ -29,7 +29,6 @@ public class EpicerieAdapter extends RecyclerView.Adapter<EpicerieAdapter.ViewHo
         // Create a new view.
         View view = inflater.inflate(R.layout.protoype_epicerie, parent, false);
         return new ViewHolder(view);
-
     }
 
     // binds the data to the TextView in each row
@@ -38,7 +37,9 @@ public class EpicerieAdapter extends RecyclerView.Adapter<EpicerieAdapter.ViewHo
 
         // Get element from your dataset at this position and replace the contents of the view
         // with that element
-        viewHolder.textView.setText(listeEpicerie.get(position).getDescriptionItem());
+        viewHolder.description.setText(listeEpicerie.get(position).getDescriptionItem());
+        viewHolder.title.setText(listeEpicerie.get(position).getNomItem());
+
     }
 
     @Override
@@ -47,10 +48,12 @@ public class EpicerieAdapter extends RecyclerView.Adapter<EpicerieAdapter.ViewHo
     }
 
     public static class ViewHolder extends RecyclerView.ViewHolder {
-        TextView textView;
+        TextView description;
+        TextView title;
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
-            textView = (TextView) itemView.findViewById(R.id.nom_item);
+            title = (TextView) itemView.findViewById(R.id.nom_item);
+            description = (TextView) itemView.findViewById(R.id.description);
         }
     }
 
