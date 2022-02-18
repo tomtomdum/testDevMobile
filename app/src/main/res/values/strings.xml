@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">testDevMobile</string>
+    <string name="login">english</string>
+    <string name="log_button">Log in</string>
 </resources>

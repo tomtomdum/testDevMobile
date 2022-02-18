@@ -17,7 +17,9 @@ import com.example.testdevmobile.Models.ItemEpicerie;
 import java.util.ArrayList;
 //https://stackoverflow.com/questions/40584424/simple-android-recyclerview-example
 public class EpicerieAdapter extends RecyclerView.Adapter<EpicerieAdapter.ViewHolder> {
-    ArrayList<ItemEpicerie> listeEpicerie = new ArrayList<ItemEpicerie>();
+    private ArrayList<ItemEpicerie> listeEpicerie = new ArrayList<ItemEpicerie>();
+
+
     private LayoutInflater inflater;
 
     EpicerieAdapter(Context context, ArrayList list){
@@ -50,10 +52,19 @@ public class EpicerieAdapter extends RecyclerView.Adapter<EpicerieAdapter.ViewHo
         return listeEpicerie.size();
     }
 
-    public static class ViewHolder extends RecyclerView.ViewHolder {
+    public ArrayList<ItemEpicerie> getListeEpicerie() {
+        return listeEpicerie;
+    }
+
+    public void setListeEpicerie(ArrayList<ItemEpicerie> listeEpicerie) {
+        this.listeEpicerie = listeEpicerie;
+    }
+
+    public class ViewHolder extends RecyclerView.ViewHolder {
         TextView description;
         TextView title;
         CardView cardView;
+
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
 //            cardView = itemView.findViewById(R.id.card_view);
@@ -62,14 +73,18 @@ public class EpicerieAdapter extends RecyclerView.Adapter<EpicerieAdapter.ViewHo
                 @Override
                 public void onClick(View view) {
                     Log.i("clicl","click");
-                    EpicerieActivity item = new EpicerieActivity();
-                    item.delete();
+//                    listeEpicerie.remove(getLayoutPosition());
+                    for (long i =0; i<999999999; i++){
+                        listeEpicerie.add(new ItemEpicerie("pormme", "ses bons quand ses pas trop surettaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"));
+                    }
+                    notifyDataSetChanged();
                 }
             });
 
 
             title = (TextView) itemView.findViewById(R.id.nom_item);
             description = (TextView) itemView.findViewById(R.id.description);
+
         }
     }
 

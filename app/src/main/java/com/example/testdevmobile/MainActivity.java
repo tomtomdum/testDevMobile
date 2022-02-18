@@ -51,12 +51,12 @@ public class MainActivity extends AppCompatActivity {
         startActivity(listIntent);
     }
 
-    public void onMenuClick(View view){
+    public void openFragment(View view){
 
         FragmentManager fm = getSupportFragmentManager();
         FragmentTransaction transaction = fm.beginTransaction();
         WeatherFragments frag = new WeatherFragments();
-        transaction.replace(R.id.my_frag,frag, "weather");
+        transaction.replace(R.id.main_layout,frag, "weather");
         transaction.commit();
     }
 

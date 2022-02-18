@@ -16,8 +16,10 @@
         <entry key="app/src/main/res/drawable/ic_baseline_person_24.xml" value="0.265" />
         <entry key="app/src/main/res/layout/activity_drugs_list.xml" value="0.17553191489361702" />
         <entry key="app/src/main/res/layout/activity_epicerie.xml" value="0.17553191489361702" />
-        <entry key="app/src/main/res/layout/activity_main.xml" value="0.17553191489361702" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/activity_profile.xml" value="0.18489583333333334" />
         <entry key="app/src/main/res/layout/protoype_epicerie.xml" value="0.4815844336344684" />
+        <entry key="app/src/main/res/layout/weather.xml" value="0.18489583333333334" />
       </map>
     </option>
   </component>

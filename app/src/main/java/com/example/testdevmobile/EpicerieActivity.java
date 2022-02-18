@@ -37,11 +37,4 @@ public class EpicerieActivity extends AppCompatActivity {
             listeEpicerie.add(new ItemEpicerie("pormme", "ses bons quand ses pas trop surettaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"));
         }
     }
-
-    public void delete(){
-        Log.i("allo","allo");
-        listeEpicerie.remove(1);
-        adapter.notifyItemRemoved(1);
-
-    }
 }
