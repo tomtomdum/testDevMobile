@@ -74,7 +74,7 @@ public class EpicerieAdapter extends RecyclerView.Adapter<EpicerieAdapter.ViewHo
                 public void onClick(View view) {
                     Log.i("clicl","click");
 //                    listeEpicerie.remove(getLayoutPosition());
-                    for (long i =0; i<999999999; i++){
+                    for (long i =0; i<999; i++){
                         listeEpicerie.add(new ItemEpicerie("pormme", "ses bons quand ses pas trop surettaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"));
                     }
                     notifyDataSetChanged();
