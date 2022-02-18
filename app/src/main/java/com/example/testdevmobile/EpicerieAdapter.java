@@ -1,9 +1,12 @@
 package com.example.testdevmobile;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.view.menu.MenuView;
+import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Context;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -50,8 +53,21 @@ public class EpicerieAdapter extends RecyclerView.Adapter<EpicerieAdapter.ViewHo
     public static class ViewHolder extends RecyclerView.ViewHolder {
         TextView description;
         TextView title;
+        CardView cardView;
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
+//            cardView = itemView.findViewById(R.id.card_view);
+
+            itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    Log.i("clicl","click");
+                    EpicerieActivity item = new EpicerieActivity();
+                    item.delete();
+                }
+            });
+
+
             title = (TextView) itemView.findViewById(R.id.nom_item);
             description = (TextView) itemView.findViewById(R.id.description);
         }

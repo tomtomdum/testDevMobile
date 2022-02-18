@@ -7,6 +7,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
+import android.util.Log;
 
 import com.example.testdevmobile.Models.ItemEpicerie;
 import com.example.testdevmobile.databinding.ActivityEpicerieBinding;
@@ -14,7 +15,7 @@ import com.example.testdevmobile.databinding.ActivityEpicerieBinding;
 import java.util.ArrayList;
 
 public class EpicerieActivity extends AppCompatActivity {
-    ArrayList<ItemEpicerie> listeEpicerie = new ArrayList<ItemEpicerie>();
+    ArrayList<ItemEpicerie> listeEpicerie = new ArrayList<>();
     EpicerieAdapter adapter;
     private ActivityEpicerieBinding binder;
     @Override
@@ -32,8 +33,15 @@ public class EpicerieActivity extends AppCompatActivity {
     }
 
     private void populateList(){
-        for (int i =0; i<1000000; i++){
+        for (int i =0; i<4; i++){
             listeEpicerie.add(new ItemEpicerie("pormme", "ses bons quand ses pas trop surettaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"));
         }
+    }
+
+    public void delete(){
+        Log.i("allo","allo");
+        listeEpicerie.remove(1);
+        adapter.notifyItemRemoved(1);
+
     }
 }
