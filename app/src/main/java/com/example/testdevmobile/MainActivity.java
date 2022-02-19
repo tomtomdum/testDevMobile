@@ -7,8 +7,10 @@ import androidx.fragment.app.FragmentTransaction;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.view.View;
-import android.widget.TextView;
+import android.widget.PopupMenu;
+import android.widget.Toast;
 
 import com.example.testdevmobile.databinding.ActivityMainBinding;
 import com.example.testdevmobile.fragments.WeatherFragments;
@@ -20,7 +22,7 @@ crééer une layout weatherfragement (contient le layout du fragment)
 crééer une méthode qui va remplacer un élément du layout main qui va etre le container du layout weather
  */
 // implementation 'androidx.databinding:databinding-runtime:7.1.0'
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements PopupMenu.OnMenuItemClickListener {
     private int counter =0;
     private ActivityMainBinding binder;
     int compteur;
@@ -29,11 +31,9 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         binder = DataBindingUtil.setContentView(this, R.layout.activity_main);
         setContentView(binder.getRoot());
-
-
     }
 
-//    public void onOpen(View view) {
+    //    public void onOpen(View view) {
 //        Intent profileItent = new Intent(this, Profile.class);
 //        profileItent.setAction(Intent.)
 //        profileItent.putExtra("name", "bork");
@@ -63,5 +63,28 @@ public class MainActivity extends AppCompatActivity {
     public void openRecyclerView(View view){
         Intent intent = new Intent(this,EpicerieActivity.class);
         startActivity(intent);
+    }
+
+    public void showPopup(View view) {
+        PopupMenu popupMenu = new PopupMenu(this, view);
+        popupMenu.setOnMenuItemClickListener(this);
+        popupMenu.inflate(R.menu.context_menu);
+        popupMenu.show();
+    }
+
+    @Override
+    public boolean onMenuItemClick(MenuItem menuItem) {
+        switch (menuItem.getItemId()) {
+            case R.id.options_details:
+                Toast.makeText(this, "option 1 selected", Toast.LENGTH_SHORT).show();
+                return true;
+
+            case R.id.options_profile:
+                Toast.makeText(this, "option 2 selected", Toast.LENGTH_SHORT).show();
+                return true;
+
+            default:
+                return false;
+        }
     }
 }
