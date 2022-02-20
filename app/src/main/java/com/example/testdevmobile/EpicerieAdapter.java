@@ -8,9 +8,12 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.content.Context;
 import android.util.Log;
 import android.view.LayoutInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.PopupMenu;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.testdevmobile.Models.ItemEpicerie;
 
@@ -60,7 +63,9 @@ public class EpicerieAdapter extends RecyclerView.Adapter<EpicerieAdapter.ViewHo
         this.listeEpicerie = listeEpicerie;
     }
 
-    public class ViewHolder extends RecyclerView.ViewHolder {
+
+
+    public class ViewHolder extends RecyclerView.ViewHolder  implements PopupMenu.OnMenuItemClickListener  {
         TextView description;
         TextView title;
         CardView cardView;
@@ -73,19 +78,41 @@ public class EpicerieAdapter extends RecyclerView.Adapter<EpicerieAdapter.ViewHo
                 @Override
                 public void onClick(View view) {
                     Log.i("clicl","click");
-//                    listeEpicerie.remove(getLayoutPosition());
-                    for (long i =0; i<999; i++){
-                        listeEpicerie.add(new ItemEpicerie("pormme", "ses bons quand ses pas trop surettaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"));
-                    }
-                    notifyDataSetChanged();
+//                  listeEpicerie.remove(getLayoutPosition());
+                    showPopup(view);
                 }
             });
-
 
             title = (TextView) itemView.findViewById(R.id.nom_item);
             description = (TextView) itemView.findViewById(R.id.description);
 
+            }
+
+        public void showPopup(View view) {
+            PopupMenu popupMenu = new PopupMenu(view.getContext(), view);
+            popupMenu.setOnMenuItemClickListener(this);
+            popupMenu.inflate(R.menu.context_menu_recycler_view);
+            popupMenu.show();
+        }
+        @Override
+        public boolean onMenuItemClick(MenuItem menuItem) {
+            switch (menuItem.getItemId()) {
+                case R.id.options_add:
+                    for (long i =0; i<999; i++){
+                        listeEpicerie.add(new ItemEpicerie("pormme", "ses bons quand ses pas trop surettaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"));
+                        notifyDataSetChanged();
+                    }
+                    return true;
+
+                case R.id.options_remove:
+                    listeEpicerie.remove(getPosition());
+                    notifyDataSetChanged();
+
+                    return true;
+
+                default:
+                    return false;
+            }
         }
     }
-
 }
