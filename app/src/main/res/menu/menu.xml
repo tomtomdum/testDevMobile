@@ -10,4 +10,11 @@
         android:title="Profile"
         app:showAsAction="never"
         />
+
+    <item
+        android:id="@+id/menu_favorite"
+        android:icon="@drawable/ic_baseline_star_24"
+        android:title="Favorite"
+        app:showAsAction="never"
+        />
 </menu>

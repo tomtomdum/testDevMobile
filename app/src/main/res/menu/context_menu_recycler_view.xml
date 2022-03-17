@@ -6,12 +6,12 @@
 
     <item
         android:icon="@drawable/ic_baseline_person_24"
-        android:title="Details"
+        android:title="add ppl"
         app:showAsAction="never"
-        android:id="@+id/options_details"
+        android:id="@+id/options_add"
         />
     <item
-        android:title="Details"
-        android:id="@+id/options_profile"
+        android:title="delete 1"
+        android:id="@+id/options_remove"
         />
 </menu>

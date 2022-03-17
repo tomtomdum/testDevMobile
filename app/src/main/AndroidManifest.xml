@@ -10,7 +10,13 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.TestDevMobile">
         <activity
-            android:name=".drugsList"
+            android:name=".EpicerieActivity"
+            android:exported="false" />
+        <activity
+            android:name=".EpicerieAdapter"
+            android:exported="false" />
+        <activity
+            android:name=".DrugsList"
             android:exported="false" />
         <activity
             android:name=".Profile"
