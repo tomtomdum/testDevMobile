@@ -1,7 +1,6 @@
 package com.example.testdevmobile;
 
 import androidx.annotation.NonNull;
-import androidx.appcompat.view.menu.MenuView;
 import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -13,16 +12,13 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.PopupMenu;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.example.testdevmobile.Models.ItemEpicerie;
 
 import java.util.ArrayList;
 //https://stackoverflow.com/questions/40584424/simple-android-recyclerview-example
 public class EpicerieAdapter extends RecyclerView.Adapter<EpicerieAdapter.ViewHolder> {
-    private ArrayList<ItemEpicerie> listeEpicerie = new ArrayList<ItemEpicerie>();
-
-
+    private ArrayList<ItemEpicerie> listeEpicerie = new ArrayList<>();
     private LayoutInflater inflater;
 
     EpicerieAdapter(Context context, ArrayList list){
