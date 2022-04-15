@@ -50,7 +50,7 @@ public class MainActivity extends AppCompatActivity implements PopupMenu.OnMenuI
         Retrofit retrofit = RetrofitClient.getClient("https://api.openweathermap.org/data/2.5/");
         APIService api = retrofit.create(APIService.class);
 
-        Call<JsonObject> call = api.getMeteo(45.5017,73.5673, apiKey );
+        Call<JsonObject> call = api.getMeteo(45,11,apiKey);
 
         call.enqueue(new Callback<JsonObject>() {
             @Override
@@ -59,6 +59,8 @@ public class MainActivity extends AppCompatActivity implements PopupMenu.OnMenuI
                 object.get("coord");
                 //parse object
                 Log.i("aaa", object.get("coord").toString());
+                Log.i("aaa", object.toString());
+
             }
 
             @Override
@@ -67,32 +69,7 @@ public class MainActivity extends AppCompatActivity implements PopupMenu.OnMenuI
             }
         });
 
-//        JsonObject json = new JsonObject(api.getMeteo(45.5017, 73.5673, apiKey).request());
-//        Call call = api.getMeteo(45.5017,73.5673, apiKey );
-//        Log.i("dddd", "aaaaab");
-//
-//        call.enqueue(new Callback() {
-//            @Override
-//            public void onResponse(Call call, Response response) {
-//                Log.i("dddd", "aaaaa");
-//            }
-//
-//            @Override
-//            public void onFailure(Call call, Throwable t) {
-//
-//            }
-//        });
-//        Log.i("reponse json", reponse.);
-
     }
-
-    //    public void onOpen(View view) {
-//        Intent profileItent = new Intent(this, Profile.class);
-//        profileItent.setAction(Intent.)
-//        profileItent.putExtra("name", "bork");
-//        profileItent.putExtra("car", "civique");
-//        startActivity(profileItent);
-//    }
 
     public void openCam(View view) {
         Intent cam = new Intent("android.media.action.IMAGE_CAPTURE");
