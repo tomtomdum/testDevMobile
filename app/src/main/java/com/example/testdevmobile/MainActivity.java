@@ -81,6 +81,11 @@ public class MainActivity extends AppCompatActivity implements PopupMenu.OnMenuI
         startActivity(listIntent);
     }
 
+    public void openMap(View view) {
+        Intent listIntent = new Intent(this, MapsActivity.class);
+        startActivity(listIntent);
+    }
+
     public void openFragment(View view){
 
         FragmentManager fm = getSupportFragmentManager();
